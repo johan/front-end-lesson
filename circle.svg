@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 400 400" _viewBox="x y w h">
   <circle cx="200" cy="200" r="50"/>
+  <circle cx="300" cy="300" r="20"/>
 </svg>
