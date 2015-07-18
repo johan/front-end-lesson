@@ -8,16 +8,13 @@
          margin-left: -100px;
          width: 200px;
        }
-       svg * {
-         fill: none;
-       }
     </style>
 </head><body>
 
 <svg width="100%" viewBox="0 0 200 200">
-  <circle id="circle" cx="100" cy="100" r="50"/>
-  <rect id="square" x="50" y="50" width="100" height="100"/>
-  <path id="triangle" d="M50,150 100,50 100,150"/>
+  <circle fill="none" id="circle" cx="100" cy="100" r="50"/>
+  <rect fill="none" id="square" x="50" y="50" width="100" height="100"/>
+  <path fill="none" id="triangle" d="M50,150 100,50 100,150"/>
 </svg>
 
 <br>
@@ -36,8 +33,12 @@ function onChange(e) {
   return doSomething.apply(this, arguments);
 }
 
-function doSomething() {
-  console.log(arguments);
+function doSomething(e) {
+  option = e.target.options[e.target.selectedIndex];
+  console.log(option.value); // Triangle, for instance
+  id = option.value.toLowerCase();
+  shape = document.getElementById(id);
+  shape.setAttribute('fill', 'red');
 }
 </script>
 </body></html>
