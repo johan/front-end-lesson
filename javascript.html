@@ -30,5 +30,14 @@
 
 <script>
 var thing = document.querySelector("#thing");
+thing.addEventListener('change', onChange);
+
+function onChange(e) {
+  return doSomething.apply(this, arguments);
+}
+
+function doSomething() {
+  console.log(arguments);
+}
 </script>
 </body></html>
