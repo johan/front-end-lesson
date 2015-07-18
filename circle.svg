@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 400 400" _viewBox="x y w h">
-  <circle cx="200" cy="200" r="50"/>
-  <circle cx="300" cy="300" r="20"/>
+     viewBox="0 -400 400 800" _viewBox="x y w h">
+  <rect _fill="none" stroke="pink" x="1" y="1" width="398" height="398"/>
+  <circle fill="white" cx="200" cy="200" r="50"/>
+  <circle fill="white" cx="300" cy="300" r="20"/>
+  <path
+    stroke="green" stroke-width="10" stroke-linecap="round"
+    d="M 200 -200 l 50 -20"
+  />
 </svg>
