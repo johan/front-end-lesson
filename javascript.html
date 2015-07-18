@@ -37,8 +37,13 @@ function doSomething(e) {
   option = e.target.options[e.target.selectedIndex];
   console.log(option.value); // Triangle, for instance
   id = option.value.toLowerCase();
-  shape = document.getElementById(id);
-  shape.setAttribute('fill', 'red');
+
+  shapes = document.querySelectorAll('svg > *');
+  for (i = 0; i < shapes.length; i++) {
+    shape = shapes[i];
+    colour = shape.id === id ? 'red' : 'none'
+    shape.setAttribute('fill', colour);
+  }
 }
 </script>
 </body></html>
